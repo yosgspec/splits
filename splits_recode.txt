@@ -1,0 +1,51 @@
+C:\>splits_d
+D:string.splitLines
+565
+asdff,astgrw3h,wtegole,kserlhge3t,earsgh,ergh,sagr,erghe
+D:string.replace & split
+2680
+D:regex.split
+8288
+C:\>splits_cs
+C#:String.Replace & Split
+474
+C#:String.Split(String[])
+504
+C#:Regex.Split
+3605
+C:\>splits_vb
+VisualBasic:String.Replace & VisualBasic.Strings.Split
+1256
+VisualBasic:String.Replace & Split
+472
+VisualBasic:String.Split(String())
+508
+VisualBasic:Regex.Split
+3748
+C:\>splits_hsp
+HSP:strrep & split
+1745
+C:\>node splits.js 
+JavaScript:string.split(Regex)
+sw: 364.411ms
+JavaScript:string.replace & split(string)
+sw: 1363.640ms
+C:\>py -3 splits.py 
+Python3:string.splitlines
+476.7577648162842
+asdff,astgrw3h,wtegole,kserlhge3t,earsgh,ergh,sagr,erghe
+Python3:string.replace & split
+863.661527633667
+Python3:re.split
+2839.435815811157
+C:\>pypy3 splits.py 
+Python3:string.splitlines
+211.4248275756836
+asdff,astgrw3h,wtegole,kserlhge3t,earsgh,ergh,sagr,erghe
+Python3:string.replace & split
+238.33417892456055
+Python3:re.split
+1081.1100006103516
+C:\>sbcl --script splits.lisp 
+SBCL:uiop:frob-substring & split-replace,6125
+CCL:uiop:frob-substring & split-replace,9359
