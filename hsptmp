@@ -3,16 +3,16 @@
 #include "winmm.as"
 
 sdim lf:poke lf,,10
-adef="asdff"+lf+"astgrw3h\nwtegole\rkserlhge3t"+lf+"earsgh"+lf+"ergh\rsagr\nerghe\r"
+words="asdff"+lf+"astgrw3h\nwtegole\rkserlhge3t"+lf+"earsgh"+lf+"ergh\rsagr\nerghe\r"
 
 sdim wordList
 mes "HSP:strrep & split"
 sw=timeGetTime()
 repeat 1000000
-	words=adef
-	strrep words,"\n",lf
-	strrep words,"\r",lf
-	split words,lf,wordList
+	s=words
+	strrep s,"\n",lf
+	strrep s,"\r",lf
+	split s,lf,wordList
 loop
 mes timeGetTime()-sw
 

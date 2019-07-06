@@ -1,11 +1,12 @@
 (require :asdf)
 (asdf:load-system :uiop)
 
+(defconstant cr (princ-to-string #\Return))
+(defconstant lf (princ-to-string #\Linefeed))
+(defconstant crlf (format nil "~s~s" cr lf))
+
 (write-line "CommonLisp:uiop:frob-substring & split-replace")
 (let* (
-		(lf (princ-to-string #\Linefeed))
-		(cr (princ-to-string #\Return))
-		(crlf (format nil "~words~words" cr lf))
 		(words (concatenate 'string 
 			"asdff" lf "astgrw3h" crlf "wtegole" cr "kserlhge3t" lf "earsgh" lf "ergh" cr "sagr" crlf "erghe" cr))
 		(sw (get-internal-real-time))
