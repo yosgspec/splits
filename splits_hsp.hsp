@@ -1,0 +1,21 @@
+#packopt name "splits_hsp"
+#runtime "hsp3cl"
+#include "winmm.as"
+
+sdim lf:poke lf,,10
+adef="asdff"+lf+"astgrw3h\nwtegole\rkserlhge3t"+lf+"earsgh"+lf+"ergh\rsagr\nerghe\r"
+
+sdim s
+mes "HSP:strrep & split"
+sw=timeGetTime()
+repeat 1000000
+	a=adef
+	strrep a,"\n",lf
+	strrep a,"\r",lf
+	split a,lf,s
+loop
+mes timeGetTime()-sw
+
+sdim ss
+foreach s: if cnt!0{ss+=","}ss+=strtrim(s.cnt,1,10): loop
+mes ss
